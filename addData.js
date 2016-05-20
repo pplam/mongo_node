@@ -2,7 +2,7 @@ var mongo = require('mongodb');
 
 var mongoc = mongo.MongoClient;
 
-var url = 'mongodb://localhost:27017/test';
+var url = 'mongodb://' + process.env.MONGO_PORT_27017_TCP_ADDR + ':' + process.env.MONGO_PORT_27017_TCP_PORT + '/test';
 
 mongoc.connect(url, function(err, db){
   if(err){
@@ -22,7 +22,7 @@ mongoc.connect(url, function(err, db){
         console.log(err);
       }
       else{
-        console.log('Inserted %d documents into "users" collection, they are: ',result.length, result);
+        console.log('Inserted ' + result.length + 'documents into "users" collection, they are: ', result);
       }
     db.close();
     });
