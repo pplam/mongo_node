@@ -1,0 +1,14 @@
+{
+  "name": "docker_node_mongo",
+  "version": "1.0.0",
+  "description": "Node.js app on docker",
+  "author": "Luo Shiwen<shiwen.l.ating@gmail.com>",
+  "main": "addData.js",
+  "scripts": {
+    "start": "node addData.js"
+  },
+  "dependencies": {
+    "mongodb": "^2.1.19"
+  }
+}
+
